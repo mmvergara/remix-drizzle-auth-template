@@ -2,6 +2,11 @@ import { createCookieSessionStorage, redirect } from "@remix-run/node";
 import { getUserById } from "../db/users";
 import { UserID } from "../db/schema";
 
+const SESSION_SECRET_KEY = process.env.SESSION_SECRET_KEY;
+if (!SESSION_SECRET_KEY) {
+  throw new Error("SECRET_KEY is not defined in .env");
+}
+
 export const { getSession, commitSession, destroySession } =
   createCookieSessionStorage({
     cookie: {
@@ -12,7 +17,7 @@ export const { getSession, commitSession, destroySession } =
       httpOnly: true,
       sameSite: "lax",
       secure: process.env.NODE_ENV === "production",
-      secrets: [process.env.SESSION_SECRET!],
+      secrets: [SESSION_SECRET_KEY],
     },
   });
 
