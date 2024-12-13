@@ -1,5 +1,9 @@
 # Remix Drizzle Auth Template
 
+<p align="center">
+<img src="remove_me.png" width="450">
+</p>
+
 ## Installation
 
 ```bash
