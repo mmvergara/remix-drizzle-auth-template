@@ -38,8 +38,14 @@ npm run dev
 
 ---
 
-## Things you need to know
+## What you need to know
 
 - All of db operations are done in `./app/.server/db, you can organize them in you liking
 
 - To protect routes you should [always call](https://remix.run/docs/en/1.19.3/pages/faq#how-can-i-have-a-parent-route-loader-validate-the-user-and-protect-all-child-routes) `requireUser` function in the loader
+
+- Routes
+  - `./`
+  - `./singin`
+  - `./signup`
+  - `./protected`
