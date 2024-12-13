@@ -53,3 +53,7 @@ npm run dev
   - `./singin`
   - `./signup`
   - `./protected`
+
+---
+
+Authentication logic heavily inspired by [AlemTuzlak](https://github.com/AlemTuzlak/remix-login)
